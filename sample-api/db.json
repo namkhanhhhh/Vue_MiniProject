@@ -1,15 +1,9 @@
 {
   "products": [
     {
-      "name": "Test product 3 (test edit)",
-      "price": "5000000",
-      "description": "product 3",
-      "id": "xWbk1Ck9-ba7uQZZiFxpL"
-    },
-    {
-      "name": "5645645",
+      "name": "samsung",
       "price": "645645",
-      "description": "65466546",
+      "description": "rach",
       "id": "rovKMQRGxpAUUQet_dE7W"
     },
     {
@@ -65,6 +59,18 @@
       "price": "8",
       "description": "9",
       "id": "K-0hpSOiXgqb62SEy27RJ"
+    },
+    {
+      "name": "Iphone 13",
+      "price": "2333333333",
+      "description": "Nice",
+      "id": "InxMkCd_VPf0Rcg-suQWb"
+    },
+    {
+      "name": "khanh",
+      "price": "2",
+      "description": "dzai",
+      "id": "pz5Uvw9mI1ZoU610Z3sqK"
     }
   ],
   "users": [

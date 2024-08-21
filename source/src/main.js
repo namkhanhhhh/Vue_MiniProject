@@ -4,8 +4,11 @@ import router from './router'
 import './assets/css/style.css'
 import VueAxios from 'vue-axios'
 import axios from 'axios'
+import 'sweetalert2/dist/sweetalert2.min.css'
+import VueSweetalert2 from 'vue-sweetalert2'
 
 
 const app=createApp(App).use(router)
 app.use(VueAxios,{$request: axios})
+app.use(VueSweetalert2)
 app.mount('#app')
