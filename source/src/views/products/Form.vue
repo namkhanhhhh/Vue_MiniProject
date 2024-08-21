@@ -66,7 +66,7 @@ export default{
     methods:{
         
         validate(){
-            let inValid=true
+            let isValid=true
             this.errors={
                 name:'',
                 price:'',
@@ -74,12 +74,12 @@ export default{
             }
             if(!this.product.name){
                     this.errors.name="Product name is required"
-                    inValid=false
+                    isValid=false
             }
 
             if(!this.product.price){
                     this.errors.price="Product price is required"
-                    inValid=false
+                    isValid=false
             }else if(!this.isNumber(this.product.price)){
                 this.errors.price="Product price must be number"
                 inValid=false
@@ -87,15 +87,23 @@ export default{
 
             if(!this.product.description){
                     this.errors.description="Product description is required"
-                    inValid=false
+                    isValid=false
             }
+            return isValid
         },
         isNumber(value){
             return /^\d*$/.test(value)
         },
         save(){
-            this.validate()
-            console.log(this.validate())
+            if(this.validate()){
+                this.$request.post('http://localhost:8000/api/products', this.product).then(res=>{
+                    if(res.data.success){
+                        this.$router.push({name:'product.list'})
+                        return
+                    }
+                    alert('Something when wrong')
+                })
+            }
         }
     }
 }
